@@ -1,0 +1,31 @@
+CS 4300
+Fall 2022
+Grace Henke
+
+Mancala AI 
+Summary: This environment will simulate the game of Mancala. The agents will attempt to win the game.
+Percepts:
+	Player One's Points
+	Player Two's Points
+	Extra Turn Flag
+	Board Status
+	Moves Made
+    
+Potential Actions: 
+the potential actions are dependent on two things, first which agents turn it is, and second which holes are empty.
+The first agent can only access holes 1-6 and the second agent can only access 7-13. If any of these holes are empty,they can't be choosen.
+	
+The Environment:
+Observability: fully observable: the board, points 
+Uncertainty: Deterministic. The movements will be exact, there will not be randomness to the movements.
+Duration: Sequential. Actions need to happen in order. Takes multiple actions to reach the goal condition.
+Stability: Dynamic. As each agent takes a turn the board changes, thus creating a dynamic environment.
+Granularity: Discrete. All values are discrete. Ex. a stone is worth one, win/lose/tie
+Participants: Multi-Agent. Since this a two player game, there will be two agents needed.
+Knowledge: Known. the physics of the environment are known.there are no unknown of the environment 	 
+
+Performance Measures:
+	There are threee outcomes to the game. The AI can win, tie or lose.
+	Lose: -1
+ 	Win: 1
+	Tie: 0
